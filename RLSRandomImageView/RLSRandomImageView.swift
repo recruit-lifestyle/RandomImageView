@@ -10,12 +10,12 @@ import UIKit
 
 class RLSRandomImageView: UIView {
     private var imageArray: NSMutableArray!
+    private var imageViewArray: NSMutableArray!
     private var backgroundView: UIView!
-    internal var width_count: Int!
-    internal var height_count: Int!
     private var screenPixelHeight: CGFloat!
     private var screenPixelWidth: CGFloat!
-    private var universeImageView: RLSUniverseImageView!
+    internal var widthCount: Int!
+    internal var heightCount: Int!
     
     required override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,8 +34,9 @@ class RLSRandomImageView: UIView {
     
     func setup(){
         imageArray = NSMutableArray()
-        width_count = 0
-        height_count = 0
+        imageViewArray = NSMutableArray()
+        widthCount = 0
+        heightCount = 0
         screenPixelHeight = self.frame.size.height / 667
         screenPixelWidth = self.frame.size.width / 375
     }
@@ -45,42 +46,39 @@ class RLSRandomImageView: UIView {
         self.backgroundView = backgroundView
     }
     
-    func show(var width_count:Int, var height_count:Int){
-        self.width_count = width_count
-        self.height_count = height_count
+    func show(var widthCount:Int, var heightCount:Int){
+        self.widthCount = widthCount
+        self.heightCount = heightCount
         show()
     }
     
     func show(){
         clearSubViews()
-        universeImageView = RLSUniverseImageView(frame: UIScreen.mainScreen().bounds)
-        self.addSubview(universeImageView)
-        let imageWidth = self.frame.size.width / CGFloat(self.width_count)
+        let imageWidth = self.frame.size.width / CGFloat(self.widthCount)
         let imageHeight = imageWidth
-        for(var i=0;i<self.height_count;i++){
-            for(var s=0;s<width_count;s++){
-                if(i*self.width_count+s < self.imageArray.count){
+        for(var i=0;i<self.heightCount;i++){
+            for(var s=0;s<widthCount;s++){
+                if(i*self.widthCount+s < self.imageArray.count){
                     var iv = UIImageView(frame: CGRectMake(imageWidth * CGFloat(s), imageHeight * CGFloat(i), imageWidth, imageHeight))
-                    iv.image = imageArray[i*self.width_count+s] as? UIImage
+                    iv.image = imageArray[i*self.widthCount+s] as? UIImage
                     iv.contentMode = UIViewContentMode.ScaleAspectFill
                     iv.layer.masksToBounds = true
-                    universeImageView.imageViewArray.addObject(iv)
+                    imageViewArray.addObject(iv)
                 }
             }
         }
-        universeImageView.convertImageView()
         randomShowImages()
     }
     
     func randomShowImages(){
         var cnt = 0
         var isOpend = NSMutableArray()
-        while(cnt < universeImageView.imageViewArray.count){
-            var index: UInt32 = arc4random_uniform(UInt32(self.universeImageView.imageViewArray.count))
+        while(cnt < self.imageArray.count){
+            var index: UInt32 = arc4random_uniform(UInt32(imageArray.count))
             if(isOpend.containsObject(Int(index)) == false){
                 isOpend.addObject(Int(index))
                 cnt++
-                showAnimation(universeImageView.imageViewArray.objectAtIndex(Int(index)) as! UIImageView , delay: 0.1 * Double(cnt))
+                showAnimation(imageViewArray.objectAtIndex(Int(index)) as! UIImageView , delay: 0.1 * Double(cnt))
             }
         }
     }

@@ -33,8 +33,6 @@
 		8708ED381B54C4550048229E /* image7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8708ED261B54C4550048229E /* image7.jpg */; };
 		8708ED391B54C4550048229E /* image8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8708ED271B54C4550048229E /* image8.png */; };
 		8708ED3A1B54C4550048229E /* image9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8708ED281B54C4550048229E /* image9.jpg */; };
-		8708ED3C1B552F290048229E /* RLSAmbguousImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8708ED3B1B552F290048229E /* RLSAmbguousImageView.swift */; };
-		8708ED3E1B5551A90048229E /* RLSUniverseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8708ED3D1B5551A90048229E /* RLSUniverseImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +76,6 @@
 		8708ED261B54C4550048229E /* image7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image7.jpg; sourceTree = "<group>"; };
 		8708ED271B54C4550048229E /* image8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image8.png; sourceTree = "<group>"; };
 		8708ED281B54C4550048229E /* image9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image9.jpg; sourceTree = "<group>"; };
-		8708ED3B1B552F290048229E /* RLSAmbguousImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLSAmbguousImageView.swift; sourceTree = "<group>"; };
-		8708ED3D1B5551A90048229E /* RLSUniverseImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLSUniverseImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +120,6 @@
 				8708ECF11B54B63E0048229E /* AppDelegate.swift */,
 				8708ECF61B54B63E0048229E /* ViewController.swift */,
 				8708ED141B54B6B80048229E /* RLSRandomImageView.swift */,
-				8708ED3D1B5551A90048229E /* RLSUniverseImageView.swift */,
-				8708ED3B1B552F290048229E /* RLSAmbguousImageView.swift */,
 				8708ECF81B54B63E0048229E /* Main.storyboard */,
 				8708ED161B54C4550048229E /* images */,
 				8708ECFB1B54B63E0048229E /* Images.xcassets */,
@@ -304,8 +298,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8708ED3C1B552F290048229E /* RLSAmbguousImageView.swift in Sources */,
-				8708ED3E1B5551A90048229E /* RLSUniverseImageView.swift in Sources */,
 				8708ECF71B54B63E0048229E /* ViewController.swift in Sources */,
 				8708ECF21B54B63E0048229E /* AppDelegate.swift in Sources */,
 				8708ECF51B54B63E0048229E /* RLSRandomImageView.xcdatamodeld in Sources */,
@@ -505,6 +497,7 @@
 				8708ED101B54B63E0048229E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8708ED111B54B63E0048229E /* Build configuration list for PBXNativeTarget "RLSRandomImageViewTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +506,7 @@
 				8708ED131B54B63E0048229E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

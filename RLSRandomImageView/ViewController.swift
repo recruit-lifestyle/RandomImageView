@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor.blackColor()
         randomImageView.setBackGroundView(randomImageView)
         self.view.backgroundColor = UIColor.whiteColor()
-        randomImageView.show(4, height_count: 7)
+        randomImageView.show(4, heightCount: 7)
     }
     
     override func viewDidAppear(animated: Bool) {
