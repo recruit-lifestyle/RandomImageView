@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         images.addObject(UIImage(named: "image16.jpeg")!)
         images.addObject(UIImage(named: "image17.jpg")!)
         
-        randomImageView = RLSRandomImageView(frame: self.view.frame, images: images)
+        randomImageView = RLSRandomImageView(frame: self.view.frame, images: images.copy() as! [UIImage])
         self.view.addSubview(randomImageView)
         var view = UIView(frame: randomImageView.bounds)
         view.backgroundColor = UIColor.blackColor()

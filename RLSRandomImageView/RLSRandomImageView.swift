@@ -9,20 +9,20 @@
 import UIKit
 
 class RLSRandomImageView: UIView {
-    private var imageArray: NSMutableArray!
-    private var imageViewArray: NSMutableArray!
-    private var backgroundView: UIView!
-    private var screenPixelHeight: CGFloat!
-    private var screenPixelWidth: CGFloat!
-    internal var widthCount: Int!
-    internal var heightCount: Int!
+    private var imageArray = [UIImage]()
+    private var imageViewArray = NSMutableArray()
+    private var backgroundView = UIView()
+    private var screenPixelHeight = CGFloat(0.0)
+    private var screenPixelWidth = CGFloat(0.0)
+    internal var widthCount = 0
+    internal var heightCount = 0
     
     required override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
     
-    init(frame: CGRect, images: NSMutableArray) {
+    init(frame: CGRect, images: [UIImage]) {
         super.init(frame: frame)
         setup()
         imageArray = images
@@ -33,10 +33,6 @@ class RLSRandomImageView: UIView {
     }
     
     func setup(){
-        imageArray = NSMutableArray()
-        imageViewArray = NSMutableArray()
-        widthCount = 0
-        heightCount = 0
         screenPixelHeight = self.frame.size.height / 667
         screenPixelWidth = self.frame.size.width / 375
     }
@@ -56,14 +52,14 @@ class RLSRandomImageView: UIView {
         clearSubViews()
         let imageWidth = self.frame.size.width / CGFloat(self.widthCount)
         let imageHeight = imageWidth
-        for(var i=0;i<self.heightCount;i++){
-            for(var s=0;s<widthCount;s++){
-                if(i*self.widthCount+s < self.imageArray.count){
-                    var iv = UIImageView(frame: CGRectMake(imageWidth * CGFloat(s), imageHeight * CGFloat(i), imageWidth, imageHeight))
-                    iv.image = imageArray[i*self.widthCount+s] as? UIImage
-                    iv.contentMode = UIViewContentMode.ScaleAspectFill
-                    iv.layer.masksToBounds = true
-                    imageViewArray.addObject(iv)
+        for i in 0..<self.heightCount {
+            for s in 0..<self.widthCount {
+                if(i * self.widthCount+s < self.imageArray.count){
+                    var imageView = UIImageView(frame: CGRectMake(imageWidth * CGFloat(s), imageHeight * CGFloat(i), imageWidth, imageHeight))
+                    imageView.image = imageArray[i*self.widthCount+s]
+                    imageView.contentMode = .ScaleAspectFill
+                    imageView.layer.masksToBounds = true
+                    imageViewArray.addObject(imageView)
                 }
             }
         }
@@ -72,34 +68,34 @@ class RLSRandomImageView: UIView {
     
     func randomShowImages(){
         var cnt = 0
-        var isOpend = NSMutableArray()
+        var openedFlgs = NSMutableArray()
         while(cnt < self.imageArray.count){
             var index: UInt32 = arc4random_uniform(UInt32(imageArray.count))
-            if(isOpend.containsObject(Int(index)) == false){
-                isOpend.addObject(Int(index))
+            if(openedFlgs.containsObject(Int(index)) == false){
+                openedFlgs.addObject(Int(index))
                 cnt++
                 showAnimation(imageViewArray.objectAtIndex(Int(index)) as! UIImageView , delay: 0.1 * Double(cnt))
             }
         }
     }
 
-    func showAnimation(var iv: UIImageView, let delay: Double){
-        let masterFrame = iv.frame
-        iv.frame = CGRectMake(iv.frame.origin.x + (iv.frame.size.width - screenPixelWidth)/2, iv.frame.origin.y + (iv.frame.size.height - screenPixelHeight)/2, screenPixelWidth, screenPixelHeight)
-        self.addSubview(iv)
+    func showAnimation(var imageView: UIImageView, let delay: Double){
+        let masterFrame = imageView.frame
+        imageView.frame = CGRectMake(imageView.frame.origin.x + (imageView.frame.size.width - screenPixelWidth)/2, imageView.frame.origin.y + (imageView.frame.size.height - screenPixelHeight)/2, screenPixelWidth, screenPixelHeight)
+        self.addSubview(imageView)
         UIView.animateWithDuration(1.0,
             delay: delay,
             usingSpringWithDamping: 0.8,
             initialSpringVelocity: 20,
             options: nil,
             animations: {
-                iv.frame = masterFrame
+                imageView.frame = masterFrame
         }, completion:nil)
     }
     
     func clearSubViews(){
-        for(var i=0;i<self.subviews.count;i++){
-            self.subviews[i].removeFromSuperview()
+        for subview in self.subviews {
+            subview.removeFromSuperview()
         }
     }
     
