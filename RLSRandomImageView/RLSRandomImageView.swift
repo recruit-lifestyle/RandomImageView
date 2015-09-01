@@ -68,11 +68,11 @@ class RLSRandomImageView: UIView {
     
     func randomShowImages(){
         var cnt = 0
-        var openedFlgs = NSMutableArray()
+        var openedFlgs = [Int]()
         while(cnt < self.imageArray.count){
             var index: UInt32 = arc4random_uniform(UInt32(imageArray.count))
-            if(openedFlgs.containsObject(Int(index)) == false){
-                openedFlgs.addObject(Int(index))
+            if(isContaintsObject(openedFlgs, target: Int(index)) == false){
+                openedFlgs.insert(Int(index), atIndex: 0)
                 cnt++
                 showAnimation(imageViewArray.objectAtIndex(Int(index)) as! UIImageView , delay: 0.1 * Double(cnt))
             }
@@ -97,6 +97,13 @@ class RLSRandomImageView: UIView {
         for subview in self.subviews {
             subview.removeFromSuperview()
         }
+    }
+    
+    func isContaintsObject(array: [Int], target: Int) -> Bool{
+        for i in 0..<array.count {
+            if array[i] == target { return true }
+        }
+        return false
     }
     
 }
