@@ -10,12 +10,12 @@ import UIKit
 
 class RLSRandomImageView: UIView {
     private var imageArray = [UIImage]()
-    private var imageViewArray = NSMutableArray()
+    private var imageViewArray = [UIImageView]()
     private var backgroundView = UIView()
     private var screenPixelHeight = CGFloat(0.0)
     private var screenPixelWidth = CGFloat(0.0)
-    internal var widthCount = 0
-    internal var heightCount = 0
+    var widthCount = 0
+    var heightCount = 0
     
     required override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,16 +30,12 @@ class RLSRandomImageView: UIView {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setup()
     }
     
-    func setup(){
+    private func setup(){
         screenPixelHeight = self.frame.size.height / 667
         screenPixelWidth = self.frame.size.width / 375
-    }
-    
-    func setBackGroundView(backgroundView: UIView){
-        self.backgroundView = UIView(frame: self.frame)
-        self.backgroundView = backgroundView
     }
     
     func show(var widthCount:Int, var heightCount:Int){
@@ -59,27 +55,27 @@ class RLSRandomImageView: UIView {
                     imageView.image = imageArray[i*self.widthCount+s]
                     imageView.contentMode = .ScaleAspectFill
                     imageView.layer.masksToBounds = true
-                    imageViewArray.addObject(imageView)
+                    imageViewArray.append(imageView)
                 }
             }
         }
         randomShowImages()
     }
     
-    func randomShowImages(){
+    private func randomShowImages(){
         var cnt = 0
         var openedFlgs = [Int]()
         while(cnt < self.imageArray.count){
             var index: UInt32 = arc4random_uniform(UInt32(imageArray.count))
-            if(isContaintsObject(openedFlgs, target: Int(index)) == false){
+            if(find(openedFlgs, Int(index)) == nil){
                 openedFlgs.insert(Int(index), atIndex: 0)
                 cnt++
-                showAnimation(imageViewArray.objectAtIndex(Int(index)) as! UIImageView , delay: 0.1 * Double(cnt))
+                showAnimation(imageViewArray[Int(index)], delay: 0.1 * Double(cnt))
             }
         }
     }
 
-    func showAnimation(var imageView: UIImageView, let delay: Double){
+    private func showAnimation(var imageView: UIImageView, let delay: Double){
         let masterFrame = imageView.frame
         imageView.frame = CGRectMake(imageView.frame.origin.x + (imageView.frame.size.width - screenPixelWidth)/2, imageView.frame.origin.y + (imageView.frame.size.height - screenPixelHeight)/2, screenPixelWidth, screenPixelHeight)
         self.addSubview(imageView)
@@ -93,17 +89,10 @@ class RLSRandomImageView: UIView {
         }, completion:nil)
     }
     
-    func clearSubViews(){
+    private func clearSubViews(){
         for subview in self.subviews {
             subview.removeFromSuperview()
         }
-    }
-    
-    func isContaintsObject(array: [Int], target: Int) -> Bool{
-        for i in 0..<array.count {
-            if array[i] == target { return true }
-        }
-        return false
     }
     
 }

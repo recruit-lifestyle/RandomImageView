@@ -12,41 +12,41 @@ class ViewController: UIViewController {
     var randomImageView: RLSRandomImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        var images: NSMutableArray = NSMutableArray()
-        images.addObject(UIImage(named: "image1.jpg")!)
-        images.addObject(UIImage(named: "image2.jpg")!)
-        images.addObject(UIImage(named: "image3.jpg")!)
-        images.addObject(UIImage(named: "image4.jpg")!)
-        images.addObject(UIImage(named: "image5.jpg")!)
-        images.addObject(UIImage(named: "image6.jpg")!)
-        images.addObject(UIImage(named: "image7.jpg")!)
-        images.addObject(UIImage(named: "image8.png")!)
-        images.addObject(UIImage(named: "image9.jpg")!)
-        images.addObject(UIImage(named: "image10.jpg")!)
-        images.addObject(UIImage(named: "image11.jpg")!)
-        images.addObject(UIImage(named: "image12.jpg")!)
-        images.addObject(UIImage(named: "image13.jpg")!)
-        images.addObject(UIImage(named: "image14.jpg")!)
-        images.addObject(UIImage(named: "image15.jpg")!)
-        images.addObject(UIImage(named: "image16.jpeg")!)
-        images.addObject(UIImage(named: "image17.jpg")!)
-        images.addObject(UIImage(named: "image18.jpg")!)
-        images.addObject(UIImage(named: "image11.jpg")!)
-        images.addObject(UIImage(named: "image12.jpg")!)
-        images.addObject(UIImage(named: "image13.jpg")!)
-        images.addObject(UIImage(named: "image14.jpg")!)
-        images.addObject(UIImage(named: "image15.jpg")!)
-        images.addObject(UIImage(named: "image16.jpeg")!)
-        images.addObject(UIImage(named: "image17.jpg")!)
-        images.addObject(UIImage(named: "image15.jpg")!)
-        images.addObject(UIImage(named: "image16.jpeg")!)
-        images.addObject(UIImage(named: "image17.jpg")!)
+        var images = [
+            UIImage(named: "image1.jpg")!,
+            UIImage(named: "image2.jpg")!,
+            UIImage(named: "image3.jpg")!,
+            UIImage(named: "image4.jpg")!,
+            UIImage(named: "image5.jpg")!,
+            UIImage(named: "image6.jpg")!,
+            UIImage(named: "image7.jpg")!,
+            UIImage(named: "image8.png")!,
+            UIImage(named: "image9.jpg")!,
+            UIImage(named: "image10.jpg")!,
+            UIImage(named: "image11.jpg")!,
+            UIImage(named: "image12.jpg")!,
+            UIImage(named: "image13.jpg")!,
+            UIImage(named: "image14.jpg")!,
+            UIImage(named: "image15.jpg")!,
+            UIImage(named: "image16.jpeg")!,
+            UIImage(named: "image17.jpg")!,
+            UIImage(named: "image18.jpg")!,
+            UIImage(named: "image10.jpg")!,
+            UIImage(named: "image11.jpg")!,
+            UIImage(named: "image12.jpg")!,
+            UIImage(named: "image13.jpg")!,
+            UIImage(named: "image14.jpg")!,
+            UIImage(named: "image15.jpg")!,
+            UIImage(named: "image16.jpeg")!,
+            UIImage(named: "image17.jpg")!,
+            UIImage(named: "image18.jpg")!,
+            UIImage(named: "image1.jpg")!
+        ]
         
-        randomImageView = RLSRandomImageView(frame: self.view.frame, images: images.copy() as! [UIImage])
+        randomImageView = RLSRandomImageView(frame: self.view.frame, images: images)
         self.view.addSubview(randomImageView)
         var view = UIView(frame: randomImageView.bounds)
         view.backgroundColor = UIColor.blackColor()
-        randomImageView.setBackGroundView(randomImageView)
         self.view.backgroundColor = UIColor.whiteColor()
         randomImageView.show(4, heightCount: 7)
     }
