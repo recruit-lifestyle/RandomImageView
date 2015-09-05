@@ -1,4 +1,71 @@
-# RLSRandomImageView
-ランダムに画像が表示されます
-## Demo
-[![](http://i.ytimg.com/vi/rGaw-_BkrgY/hqdefault.jpg)](https://www.youtube.com/watch?v=rGaw-_BkrgY&feature=youtu.be)
+#RLSRandomImageView
+
+Swift subclass of the UITableViewCell.
+
+#Screenshot
+![RLSRandomImageView](sample.gif)
+
+## Requirements
+
+- iOS 8.0+
+- Xcode 6.1
+
+
+#Installation
+
+Just add the `RLSRandomImageView` folder to your project.
+
+#Usage
+There is a need to set up `widthCount` and `heightCount` property of the view.
+The targetColor will change to ripple like from touched point in the cell.
+
+1. Create a new UIView in your storyboard or nib.
+
+2. Set the class of the UIView to RLSRandomImageView in your Storyboard or nib.
+
+3. Set `targetColor` and `targetBGcolor` for the cell.
+
+4. Set `showDuration` property programmatically if You want to change animation duration.
+
+
+#Example
+
+``` swift
+var images = [
+  UIImage(named: "image1.jpg")!,
+  UIImage(named: "image2.jpg")!,
+  UIImage(named: "image3.jpg")!
+]
+
+randomImageView = RLSRandomImageView(frame: self.view.frame, images: images)
+self.view.addSubview(randomImageView)
+randomImageView.show(4, heightCount: 7)
+
+```
+
+
+## Credits
+
+RLSRandomImageView is owned and maintained by [RECRUIT LIFESTYLE CO., LTD.](http://www.recruit-lifestyle.co.jp/)
+
+RLSRandomImageView was originally created by [Narimasa Iwabuchi](https://github.com/NariFrow)  
+
+
+##License
+
+    Copyright 2015 RECRUIT LIFESTYLE CO., LTD.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+
+  

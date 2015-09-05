@@ -10,7 +10,7 @@ import UIKit
 
 class RLSRandomImageView: UIView {
     private var imageArray = [UIImage]()
-    private var imageViewArray = [UIImageView]()
+    var imageViewArray = [UIImageView]()
     private var backgroundView = UIView()
     private var screenPixelHeight = CGFloat(0.0)
     private var screenPixelWidth = CGFloat(0.0)
@@ -65,8 +65,8 @@ class RLSRandomImageView: UIView {
     private func randomShowImages(){
         var cnt = 0
         var openedFlgs = [Int]()
-        while(cnt < self.imageArray.count){
-            var index: UInt32 = arc4random_uniform(UInt32(imageArray.count))
+        while(cnt < self.imageViewArray.count){
+            var index = arc4random_uniform(UInt32(imageViewArray.count))
             if(find(openedFlgs, Int(index)) == nil){
                 openedFlgs.insert(Int(index), atIndex: 0)
                 cnt++

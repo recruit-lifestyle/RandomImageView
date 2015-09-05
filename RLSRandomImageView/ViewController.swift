@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var randomImageView: RLSRandomImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.whiteColor()
         var images = [
             UIImage(named: "image1.jpg")!,
             UIImage(named: "image2.jpg")!,
@@ -40,18 +41,15 @@ class ViewController: UIViewController {
             UIImage(named: "image16.jpeg")!,
             UIImage(named: "image17.jpg")!,
             UIImage(named: "image18.jpg")!,
-            UIImage(named: "image1.jpg")!
+            UIImage(named: "image18.jpg")!
         ]
-        
         randomImageView = RLSRandomImageView(frame: self.view.frame, images: images)
         self.view.addSubview(randomImageView)
-        var view = UIView(frame: randomImageView.bounds)
-        view.backgroundColor = UIColor.blackColor()
-        self.view.backgroundColor = UIColor.whiteColor()
         randomImageView.show(4, heightCount: 7)
     }
     
     override func viewDidAppear(animated: Bool) {
+        
     }
 
     override func didReceiveMemoryWarning() {
