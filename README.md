@@ -17,15 +17,15 @@ Just add the `RLSRandomImageView` folder to your project.
 
 #Usage
 There is a need to set up `widthCount` and `heightCount` property of the view.
-The targetColor will change to ripple like from touched point in the cell.
+The widthCount and heightCount will change to Horizonal and Verticalsize one side of images in the view.
 
 1. Create a new UIView in your storyboard or nib.
 
 2. Set the class of the UIView to RLSRandomImageView in your Storyboard or nib.
 
-3. Set `targetColor` and `targetBGcolor` for the cell.
+3. Set `widthCount` and `heightCount` for the view.
 
-4. Set `showDuration` property programmatically if You want to change animation duration.
+4. call `show` method at the timing you want to call.
 
 
 #Example
