@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  RLSRandomImageView
 //
-//  Created by Nari on 2015/07/14.
-//  Copyright (c) 2015年 nari. All rights reserved.
+//  Copyright 2015 RECRUIT LIFESTYLE CO., LTD.
 //
 
 import UIKit
