@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RandomImageView
 
 class ViewController: UIViewController {
     override func viewDidLoad() {
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
             UIImage(named: "image18.jpg")!,
             UIImage(named: "image18.jpg")!
         ]
-        var randomImageView = RandomImageView(frame: self.view.frame, images: images)
+        var randomImageView = RandomImageView(frame: self.view.frame, images: images)
         self.view.addSubview(randomImageView)
         randomImageView.show(4, heightCount: 7)
     }

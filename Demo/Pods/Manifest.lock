@@ -1,0 +1,14 @@
+PODS:
+  - RandomImageView (0.1.0)
+
+DEPENDENCIES:
+  - RandomImageView (from `..`)
+
+EXTERNAL SOURCES:
+  RandomImageView:
+    :path: ..
+
+SPEC CHECKSUMS:
+  RandomImageView: d87e3a4b83aa9d10d436d7904e0b10d19ee8f6e6
+
+COCOAPODS: 0.37.2
