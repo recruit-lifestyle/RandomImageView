@@ -1,15 +1,15 @@
 //
-//  RLSRandomImageViewTests.swift
-//  RLSRandomImageViewTests
+//  RandomImageViewTests.swift
+//  RandomImageViewTests
 //
-//  Created by 岩渕響聖 on 2015/07/14.
+//  Created by 岩渕響聖 on 2015/09/15.
 //  Copyright (c) 2015年 nari. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class RLSRandomImageViewTests: XCTestCase {
+class RandomImageViewTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

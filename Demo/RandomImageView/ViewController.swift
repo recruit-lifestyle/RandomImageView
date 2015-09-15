@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  RLSRandomImageView
+//  RandomImageView
 //
 //  Copyright 2015 RECRUIT LIFESTYLE CO., LTD.
 //
@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var randomImageView: RLSRandomImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
@@ -42,20 +41,16 @@ class ViewController: UIViewController {
             UIImage(named: "image18.jpg")!,
             UIImage(named: "image18.jpg")!
         ]
-        randomImageView = RLSRandomImageView(frame: self.view.frame, images: images)
+        var randomImageView = RandomImageView(frame: self.view.frame, images: images)
         self.view.addSubview(randomImageView)
         randomImageView.show(4, heightCount: 7)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

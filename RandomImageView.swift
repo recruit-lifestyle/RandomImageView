@@ -1,13 +1,13 @@
 //
-//  RLSRandomImageView.swift
-//  RLSRandomImageView
+//  RandomImageView.swift
+//  RandomImageView
 //
 //  Copyright 2015 RECRUIT LIFESTYLE CO., LTD.
 //
 
 import UIKit
 
-class RLSRandomImageView: UIView {
+class RandomImageView: UIView {
     private var imageArray = [UIImage]()
     var imageViewArray = [UIImageView]()
     private var backgroundView = UIView()
@@ -73,7 +73,7 @@ class RLSRandomImageView: UIView {
             }
         }
     }
-
+    
     private func showAnimation(var imageView: UIImageView, let delay: Double){
         let masterFrame = imageView.frame
         imageView.frame = CGRectMake(imageView.frame.origin.x + (imageView.frame.size.width - screenPixelWidth)/2, imageView.frame.origin.y + (imageView.frame.size.height - screenPixelHeight)/2, screenPixelWidth, screenPixelHeight)
@@ -85,7 +85,7 @@ class RLSRandomImageView: UIView {
             options: nil,
             animations: {
                 imageView.frame = masterFrame
-        }, completion:nil)
+            }, completion:nil)
     }
     
     private func clearSubViews(){

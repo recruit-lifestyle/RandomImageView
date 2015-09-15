@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:RLSRandomImageView.xcodeproj">
+      location = "self:RandomImageView.xcodeproj">
    </FileRef>
 </Workspace>
