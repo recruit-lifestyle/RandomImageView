@@ -1,6 +1,6 @@
 #RLSRandomImageView
 
-Swift subclass of the UITableViewCell.
+Swift subclass of the UIView.
 
 #Screenshot
 ![RLSRandomImageView](sample.gif)
