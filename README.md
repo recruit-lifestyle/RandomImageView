@@ -3,7 +3,7 @@
 Swift subclass of the UIView.
 
 #Screenshot
-![RLSRandomImageView](sample.gif)
+![RLSRandomImageView](https://github.com/recruit-lifestyle/RandomImageView/wiki/GIF/sample.gif)  
 
 ## Requirements
 
