@@ -1,29 +1,71 @@
-# RandomImageView
+#RLSRandomImageView
 
-[![CI Status](http://img.shields.io/travis/Nonchalant/RandomImageView.svg?style=flat)](https://travis-ci.org/Nonchalant/RandomImageView)
-[![Version](https://img.shields.io/cocoapods/v/RandomImageView.svg?style=flat)](http://cocoapods.org/pods/RandomImageView)
-[![License](https://img.shields.io/cocoapods/l/RandomImageView.svg?style=flat)](http://cocoapods.org/pods/RandomImageView)
-[![Platform](https://img.shields.io/cocoapods/p/RandomImageView.svg?style=flat)](http://cocoapods.org/pods/RandomImageView)
+Swift subclass of the UIView.
 
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+#Screenshot
+![RLSRandomImageView](sample.gif)
 
 ## Requirements
 
-## Installation
+- iOS 8.0+
+- Xcode 6.1
 
-RandomImageView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
 
-```ruby
-pod "RandomImageView"
+#Installation
+
+Just add the `RLSRandomImageView` folder to your project.
+
+#Usage
+There is a need to set up `widthCount` and `heightCount` property of the view.
+The widthCount and heightCount will change to Horizonal and Verticalsize one side of images in the view.
+
+1. Create a new UIView in your storyboard or nib.
+
+2. Set the class of the UIView to RLSRandomImageView in your Storyboard or nib.
+
+3. Set `widthCount` and `heightCount` for the view.
+
+4. call `show` method at the timing you want to call.
+
+
+#Example
+
+``` swift
+var images = [
+  UIImage(named: "image1.jpg")!,
+  UIImage(named: "image2.jpg")!,
+  UIImage(named: "image3.jpg")!
+]
+
+randomImageView = RLSRandomImageView(frame: self.view.frame, images: images)
+self.view.addSubview(randomImageView)
+randomImageView.show(4, heightCount: 7)
+
 ```
 
-## Author
 
-Nonchalant, afrontier829@gmail.com
+## Credits
 
-## License
+RLSRandomImageView is owned and maintained by [RECRUIT LIFESTYLE CO., LTD.](http://www.recruit-lifestyle.co.jp/)
 
-RandomImageView is available under the MIT license. See the LICENSE file for more info.
+RLSRandomImageView was originally created by [Narimasa Iwabuchi](https://github.com/NariFrow)  
+
+
+##License
+
+    Copyright 2015 RECRUIT LIFESTYLE CO., LTD.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+
+  
