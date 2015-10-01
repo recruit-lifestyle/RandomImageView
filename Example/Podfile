@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'RandomImageView_Example', :exclusive => true do
+  pod "RandomImageView", :path => "../"
+end
+
+target 'RandomImageView_Tests', :exclusive => true do
+  pod "RandomImageView", :path => "../"
+
+  
+end
