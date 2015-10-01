@@ -40,7 +40,6 @@ var images = [
 randomImageView = RandomImageView(frame: self.view.frame, images: images)
 self.view.addSubview(randomImageView)
 randomImageView.show(4, heightCount: 7)
-
 ```
 
 
