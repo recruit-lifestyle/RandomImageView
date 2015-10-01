@@ -1,4 +1,5 @@
 #RandomImageView
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/RandomImageView.svg)](https://img.shields.io/cocoapods/v/RandomImageView.svg)
 
 Swift subclass of the UIView.
 
