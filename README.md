@@ -13,8 +13,22 @@ Swift subclass of the UIView.
 
 
 #Installation
+To integrate RandomImageView into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
-Just add the `RandomImageView` folder to your project.
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'RandomImageView'
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
 
 #Usage
 There is a need to set up `widthCount` and `heightCount` property of the view.
