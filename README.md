@@ -1,9 +1,9 @@
-#RLSRandomImageView
+#RandomImageView
 
 Swift subclass of the UIView.
 
 #Screenshot
-![RLSRandomImageView](https://github.com/recruit-lifestyle/RandomImageView/wiki/GIF/sample.gif)  
+![RandomImageView](https://github.com/recruit-lifestyle/RandomImageView/wiki/GIF/sample.gif)  
 
 ## Requirements
 
@@ -13,7 +13,7 @@ Swift subclass of the UIView.
 
 #Installation
 
-Just add the `RLSRandomImageView` folder to your project.
+Just add the `RandomImageView` folder to your project.
 
 #Usage
 There is a need to set up `widthCount` and `heightCount` property of the view.
@@ -21,7 +21,7 @@ The widthCount and heightCount will change to Horizonal and Verticalsize one sid
 
 1. Create a new UIView in your storyboard or nib.
 
-2. Set the class of the UIView to RLSRandomImageView in your Storyboard or nib.
+2. Set the class of the UIView to RandomImageView in your Storyboard or nib.
 
 3. Set `widthCount` and `heightCount` for the view.
 
@@ -37,7 +37,7 @@ var images = [
   UIImage(named: "image3.jpg")!
 ]
 
-randomImageView = RLSRandomImageView(frame: self.view.frame, images: images)
+randomImageView = RandomImageView(frame: self.view.frame, images: images)
 self.view.addSubview(randomImageView)
 randomImageView.show(4, heightCount: 7)
 
@@ -46,9 +46,9 @@ randomImageView.show(4, heightCount: 7)
 
 ## Credits
 
-RLSRandomImageView is owned and maintained by [RECRUIT LIFESTYLE CO., LTD.](http://www.recruit-lifestyle.co.jp/)
+RandomImageView is owned and maintained by [RECRUIT LIFESTYLE CO., LTD.](http://www.recruit-lifestyle.co.jp/)
 
-RLSRandomImageView was originally created by [Narimasa Iwabuchi](https://github.com/NariFrow)  
+RandomImageView was originally created by [Narimasa Iwabuchi](https://github.com/NariFrow)  
 
 
 ##License
