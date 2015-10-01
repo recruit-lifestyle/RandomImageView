@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.summary          = "Swift subclass of the UIView."
 
   s.description      = <<-DESC
+                      * show images on the random.
                        DESC
 
   s.homepage         = "https://github.com/recruit-lifestyle/RandomImageView"
