@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 #RandomImageView
-=======
-#RLSRandomImageView
->>>>>>> 0eb5c7d392af238c225d1b4619fa4e39feafe005
 
 Swift subclass of the UIView.
 
