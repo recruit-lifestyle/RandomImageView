@@ -32,7 +32,7 @@ $ pod install
 
 #Usage
 There is a need to set up `widthCount` and `heightCount` property of the view.
-The widthCount and heightCount will change to Horizonal and Verticalsize one side of images in the view.
+The widthCount and heightCount will change to Horizonal and Vertical size one side of images in the view.
 
 1. Create a new UIView in your storyboard or nib.
 
