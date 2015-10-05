@@ -1,9 +1,8 @@
 //
-//  AppDelegate.swift
+//  RandomImageView.swift
 //  RandomImageView
 //
-//  Created by Nonchalant on 09/18/2015.
-//  Copyright (c) 2015 Nonchalant. All rights reserved.
+//  Copyright 2015 RECRUIT LIFESTYLE CO., LTD.
 //
 
 import UIKit

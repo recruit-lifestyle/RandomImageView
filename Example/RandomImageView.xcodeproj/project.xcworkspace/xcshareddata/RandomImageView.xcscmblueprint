@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C5322D848AB157D3C3A295990DB174756D774F61",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5A4E808102137EFB25447C8AF60404C5FABFCB51" : 0,
+    "C5322D848AB157D3C3A295990DB174756D774F61" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "77A00774-3214-4146-B2AB-02DF7D920C5F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5A4E808102137EFB25447C8AF60404C5FABFCB51" : "..",
+    "C5322D848AB157D3C3A295990DB174756D774F61" : "RandomImageView\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RandomImageView",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/RandomImageView.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/ghe.misosiru.io\/n-iwabuchi\/RLSRoundTextView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5A4E808102137EFB25447C8AF60404C5FABFCB51"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:recruit-lifestyle\/RLSRandomImageView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C5322D848AB157D3C3A295990DB174756D774F61"
+    }
+  ]
+}

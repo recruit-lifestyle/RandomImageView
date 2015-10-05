@@ -1,9 +1,8 @@
 //
-//  ViewController.swift
+//  RandomImageView.swift
 //  RandomImageView
 //
-//  Created by Nonchalant on 09/18/2015.
-//  Copyright (c) 2015 Nonchalant. All rights reserved.
+//  Copyright 2015 RECRUIT LIFESTYLE CO., LTD.
 //
 
 import UIKit
@@ -16,34 +15,34 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.whiteColor()
         var images = [
-            UIImage(named: "image1")!,
-            UIImage(named: "image2")!,
-            UIImage(named: "image3")!,
-            UIImage(named: "image4")!,
-            UIImage(named: "image5")!,
-            UIImage(named: "image6")!,
-            UIImage(named: "image7")!,
-            UIImage(named: "image8")!,
-            UIImage(named: "image9")!,
-            UIImage(named: "image10")!,
-            UIImage(named: "image11")!,
-            UIImage(named: "image12")!,
-            UIImage(named: "image13")!,
-            UIImage(named: "image14")!,
-            UIImage(named: "image15")!,
-            UIImage(named: "image16")!,
-            UIImage(named: "image17")!,
-            UIImage(named: "image18")!,
-            UIImage(named: "image10")!,
-            UIImage(named: "image11")!,
-            UIImage(named: "image12")!,
-            UIImage(named: "image13")!,
-            UIImage(named: "image14")!,
-            UIImage(named: "image15")!,
-            UIImage(named: "image16")!,
-            UIImage(named: "image17")!,
-            UIImage(named: "image18")!,
-            UIImage(named: "image18")!
+            UIImage(named: "image1.png")!,
+            UIImage(named: "image2.png")!,
+            UIImage(named: "image3.png")!,
+            UIImage(named: "image4.png")!,
+            UIImage(named: "image5.png")!,
+            UIImage(named: "image6.png")!,
+            UIImage(named: "image7.png")!,
+            UIImage(named: "image8.png")!,
+            UIImage(named: "image9.png")!,
+            UIImage(named: "image10.png")!,
+            UIImage(named: "image11.png")!,
+            UIImage(named: "image12.png")!,
+            UIImage(named: "image13.png")!,
+            UIImage(named: "image14.png")!,
+            UIImage(named: "image15.png")!,
+            UIImage(named: "image16.png")!,
+            UIImage(named: "image17.png")!,
+            UIImage(named: "image18.png")!,
+            UIImage(named: "image10.png")!,
+            UIImage(named: "image11.png")!,
+            UIImage(named: "image12.png")!,
+            UIImage(named: "image13.png")!,
+            UIImage(named: "image14.png")!,
+            UIImage(named: "image15.png")!,
+            UIImage(named: "image16.png")!,
+            UIImage(named: "image17.png")!,
+            UIImage(named: "image18.png")!,
+            UIImage(named: "image18.png")!
         ]
         var randomImageView = RandomImageView(frame: self.view.frame, images: images)
         self.view.addSubview(randomImageView)
