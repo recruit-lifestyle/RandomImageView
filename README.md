@@ -10,6 +10,7 @@ Swift subclass of the UIView.
 
 - iOS 8.0+
 - Xcode 6.1
+- CocoaPods 0.38.2
 
 
 #Installation
