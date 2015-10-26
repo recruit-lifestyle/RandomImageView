@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
                       * show images on the random.
+                      * set images to this view.
                        DESC
 
   s.homepage         = "https://github.com/recruit-lifestyle/RandomImageView"
